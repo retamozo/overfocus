@@ -1,0 +1,25 @@
+{
+  "name": "overfocus",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/public/index.html",
+    "build": "parcel build src/public/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "parcel-bundler": "^1.12.4",
+    "parceljs": "0.0.1",
+    "typescript": "^4.1.4"
+  }
+}
