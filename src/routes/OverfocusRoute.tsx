@@ -1,6 +1,6 @@
 import React, { Component, FunctionComponent } from "react";
 import { Route as ReactRouterRoute, RouteProps } from "react-router-dom";
-import ErrorBoundary from "Containers/ErrorBoundary";
+import ErrorBoundary from "@/containers/ErrorBoundary";
 
 export interface OverfocusRouteProps extends RouteProps {
   component: FunctionComponent;
