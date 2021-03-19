@@ -1,17 +1,19 @@
 import React, { FunctionComponent } from "react";
+import ReactDOM from "react-dom";
 import styled from "styled-components";
 //@ts-ignore
 import video from "url:../../assets/videos/video_overfocus-intro.m4v";
 
 const BackgroundVideo: FunctionComponent = () => {
-  return (
-    <Video id="videoBG" autoPlay muted loop>
+  const Video = (
+    <VideoContainer id="VideoContainerBG" autoPlay muted loop>
       <source src={video} type="video/mp4" />
-    </Video>
+    </VideoContainer>
   );
+  return ReactDOM.createPortal(Video, document.querySelector("body")!);
 };
 
-const Video = styled.video`
+const VideoContainer = styled.video`
   position: fixed;
   z-index: -1;
   width: 100%;

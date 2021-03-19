@@ -8,8 +8,7 @@ import BackgroundVideo from "@/containers/BackgroundVideo";
 export const App = () => {
   return (
     <>
-      <BackgroundVideo />
-      <CssBaseline />
+      {/* <BackgroundVideo /> */}
       <Routes />
     </>
   );
