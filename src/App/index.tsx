@@ -4,11 +4,13 @@ import { Routes } from "../routes";
 import "./styles.css";
 import "./normalize.css";
 import BackgroundVideo from "@/containers/BackgroundVideo";
+import { Header } from "@/containers/Header";
 
 export const App = () => {
   return (
     <>
       {/* <BackgroundVideo /> */}
+      <Header />
       <Routes />
     </>
   );
