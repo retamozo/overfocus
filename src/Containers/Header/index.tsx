@@ -5,8 +5,11 @@ import logo from "url:../../assets/images/logo.png?width=60&height=60&quality=10
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import { residentsData } from "../../utils";
+import { useHistory } from "react-router";
 
 export const Header = () => {
+  const history = useHistory();
   const isMobile = useMediaQuery("(max-width:960px)");
   const Anchor: FunctionComponent<Partial<HTMLAnchorElement>> = ({
     href,
@@ -55,7 +58,23 @@ export const Header = () => {
             </ul>
           </SublinksContainer>
         </Li>
-        <Li className="residentes">RESIDENTES</Li>
+        <Li className="residentes">
+          RESIDENTES
+          <SublinksContainer>
+            <ul>
+              {residentsData.map(({ name, aka }, i) => {
+                return (
+                  <li
+                    onClick={() => history.push(`resident/${name}`)}
+                    style={{ color: "white" }}
+                  >
+                    {name.toUpperCase()}
+                  </li>
+                );
+              })}
+            </ul>
+          </SublinksContainer>
+        </Li>
         <Li>
           NOSOTROS
           <SublinksContainer>

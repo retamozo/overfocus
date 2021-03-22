@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Error from "components/Error";
+import Error from "@/components/Error";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
 type Props = RouteComponentProps;

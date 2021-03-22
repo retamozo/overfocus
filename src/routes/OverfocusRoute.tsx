@@ -1,15 +1,14 @@
-import React, { Component, FunctionComponent } from "react";
+import React, { Component, ComponentType, FunctionComponent } from "react";
 import { Route as ReactRouterRoute, RouteProps } from "react-router-dom";
 import ErrorBoundary from "@/containers/ErrorBoundary";
 
-export interface OverfocusRouteProps extends RouteProps {
-  component: FunctionComponent;
-}
 
-export const Route: FunctionComponent<OverfocusRouteProps> = ({
-  component: FunctionComponent,
+export const Route: FunctionComponent<Readonly<RouteProps>> = ({
+  component,
   ...rest
 }) => {
+
+  console.log("rest", rest)
   return (
     <ReactRouterRoute
       {...rest}

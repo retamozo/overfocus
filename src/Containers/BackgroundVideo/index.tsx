@@ -9,7 +9,7 @@ const BackgroundVideo: FunctionComponent = () => {
     <VideoContainer id="VideoContainerBG" autoPlay muted loop>
       <source src={video} type="video/mp4" />
     </VideoContainer>
-  );
+   );
   return ReactDOM.createPortal(Video, document.querySelector("body")!);
 };
 
